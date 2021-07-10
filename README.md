@@ -9,7 +9,7 @@
 ### Déploiement
 
 0. Créez un account chat et associez-lui la policy `mah_oum_chat` en vous inpisrant du fichier `policy.json`
-> N'oubliez pas de remplacer <aws-account-id> par le votre
+> N'oubliez pas de remplacer aws-account-id par le votre
 
 1. Créez une API GraphQL s'inspirant de l' Event App ( exemple fourni dans la console AppSync )
   ```
