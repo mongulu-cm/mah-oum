@@ -1,0 +1,86 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "sts:GetCallerIdentity",
+                "ec2:DescribeAccountAttributes",
+                "appsync:CreateGraphqlApi",
+                "iam:CreateServiceLinkedRole",
+                "appsync:StartSchemaCreation",
+                "appsync:GetSchemaCreationStatus",
+                "appsync:CreateApiKey",
+                "appsync:ListApiKeys",
+                "appsync:CreateDataSource",
+                "appsync:GetDataSource",
+                "appsync:CreateResolver",
+                "appsync:GetResolver",
+                "appsync:DeleteApiKey",
+                "appsync:DeleteResolver",
+                "appsync:DeleteDataSource",
+                "appsync:GetGraphqlApi",
+                "appsync:DeleteGraphqlApi"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:CreateTable",
+                "dynamodb:DescribeTable",
+                "dynamodb:DescribeContinuousBackups",
+                "dynamodb:DescribeTimeToLive",
+                "dynamodb:ListTagsOfResource",
+                "dynamodb:DeleteTable",
+                "dynamodb:TagResource"
+            ],
+            "Resource": "arn:aws:dynamodb:eu-central-1:<aws-account-id>:table/mah-oum_Events"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:CreateTable",
+                "dynamodb:TagResource"
+            ],
+            "Resource": "arn:aws:dynamodb:eu-central-1:<aws-account-id>:table/mah-oum_Comments"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:GetRole",
+                "iam:ListRolePolicies",
+                "iam:AttachRolePolicy",
+                "iam:DetachRolePolicy",
+                "iam:ListInstanceProfilesForRole",
+                "iam:DeleteRole",
+                "iam:ListAttachedRolePolicies",
+                "iam:PassRole"
+            ],
+            "Resource": "arn:aws:iam::<aws-account-id>:role/mah-oum_iam_appsync_role"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreatePolicy",
+                "iam:GetPolicy",
+                "iam:GetPolicyVersion",
+                "iam:ListPolicyVersions",
+                "iam:DeletePolicy"
+            ],
+            "Resource": "arn:aws:iam::<aws-account-id>:policy/mah-oum_iam_dynamodb_policy"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:DescribeTable",
+                "dynamodb:DescribeContinuousBackups",
+                "dynamodb:DescribeTimeToLive",
+                "dynamodb:ListTagsOfResource",
+                "dynamodb:DeleteTable"
+            ],
+            "Resource": "arn:aws:dynamodb:eu-central-1:<aws-account-id>:table/mah-oum_Comments"
+        }
+    ]
+}
