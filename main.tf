@@ -1,18 +1,3 @@
-terraform {
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 3.0"
-    }
-  }
-}
-
-# Set the AWS credentials profile and region you want to publish to.
-provider "aws" {
-  profile = var.aws_credentials_profile
-  region  = var.region
-}
-
 # --- AppSync Setup ---
 
 # Create the AppSync GraphQL api.
