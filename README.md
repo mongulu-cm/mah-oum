@@ -13,7 +13,7 @@
 
 1. Créez une API GraphQL s'inspirant de l' Event App ( exemple fourni dans la console AppSync )
   ```
-    terraform plan && terraform apply
+    git push origin main
   ``` 
 
 2. Deployez cette application et faites la pointer sur l' API en suivant la documentation: 
